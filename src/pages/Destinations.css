@@ -1,0 +1,279 @@
+/* ==========================================
+   TOOLBAR BOX
+========================================== */
+
+.toolbar-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#F8FAFC;
+
+    border-radius:15px;
+
+    padding:16px 20px;
+
+    transition:.35s;
+
+}
+
+.toolbar-box:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.12);
+
+}
+
+.toolbar-box:focus-within{
+
+    border:2px solid #2563EB;
+
+}
+
+.toolbar-box svg{
+
+    color:#2563EB;
+
+    font-size:20px;
+
+}
+
+.toolbar-box input,
+.toolbar-box select{
+
+    width:100%;
+
+    border:none;
+
+    background:transparent;
+
+    outline:none;
+
+    font-size:16px;
+
+    color:#334155;
+
+}
+
+.toolbar-box input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.toolbar-box select{
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   DESTINATION GRID
+========================================== */
+
+.destination-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(330px,1fr));
+
+    gap:35px;
+
+    margin:70px 0 100px;
+
+}
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.no-result{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    background:white;
+
+    padding:70px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.no-result h2{
+
+    font-size:38px;
+
+    color:#2563EB;
+
+    margin-bottom:15px;
+
+}
+
+.no-result p{
+
+    color:#64748B;
+
+    font-size:17px;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.destination-toolbar{
+
+    animation:fadeDown .8s ease;
+
+}
+
+.destination-grid{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.destination-toolbar{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-content h1{
+
+font-size:44px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.destination-hero{
+
+height:45vh;
+
+}
+
+.hero-content h1{
+
+font-size:34px;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+}
+
+.destination-toolbar{
+
+padding:20px;
+
+margin-top:-30px;
+
+}
+
+.destination-grid{
+
+grid-template-columns:1fr;
+
+gap:25px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-content h1{
+
+font-size:28px;
+
+}
+
+.hero-content span{
+
+font-size:13px;
+
+}
+
+.destination-toolbar{
+
+padding:18px;
+
+}
+
+.toolbar-box{
+
+padding:14px;
+
+}
+
+.no-result{
+
+padding:40px 20px;
+
+}
+
+.no-result h2{
+
+font-size:28px;
+
+}
+
+}

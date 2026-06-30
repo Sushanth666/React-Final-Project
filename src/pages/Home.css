@@ -1,0 +1,756 @@
+/* ==========================================
+   HOME PAGE
+========================================== */
+
+.home-page{
+    background:#f8fbff;
+}
+
+/* ==========================================
+   SEARCH SECTION
+========================================== */
+
+.search-section{
+    position:relative;
+    padding:90px 0;
+    margin-top:-60px;
+    z-index:20;
+}
+
+/* ==========================================
+   SEARCH CARD
+========================================== */
+
+.search-card{
+
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #1D4ED8
+    );
+
+    border-radius:30px;
+
+    padding:50px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 55px rgba(37,99,235,.30);
+
+}
+
+/* Decorative Circle */
+
+.search-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+right:-70px;
+top:-70px;
+
+}
+
+.search-card::after{
+
+content:"";
+
+position:absolute;
+
+width:160px;
+height:160px;
+
+background:rgba(255,255,255,.06);
+
+border-radius:50%;
+
+left:-40px;
+bottom:-40px;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.search-title{
+
+position:relative;
+
+z-index:5;
+
+text-align:center;
+
+color:white;
+
+margin-bottom:40px;
+
+}
+
+.search-title span{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:rgba(255,255,255,.15);
+
+border-radius:40px;
+
+margin-bottom:20px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+backdrop-filter:blur(12px);
+
+}
+
+.search-title h2{
+
+font-size:46px;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+.search-title p{
+
+font-size:18px;
+
+color:#dbeafe;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   SEARCH CONTROLS
+========================================== */
+
+.search-controls{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:25px;
+
+position:relative;
+
+z-index:5;
+
+}
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.input-group{
+
+display:flex;
+
+align-items:center;
+
+background:white;
+
+height:68px;
+
+padding:0 22px;
+
+border-radius:18px;
+
+transition:.35s;
+
+}
+
+.input-group:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.input-group:focus-within{
+
+box-shadow:
+0 0 0 4px rgba(255,255,255,.25),
+0 12px 35px rgba(37,99,235,.25);
+
+}
+
+.input-icon{
+
+font-size:22px;
+
+color:#2563EB;
+
+margin-right:15px;
+
+}
+
+.input-group input,
+.input-group select{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+font-size:17px;
+
+color:#334155;
+
+}
+
+.input-group input::placeholder{
+
+color:#94A3B8;
+
+}
+
+.input-group select{
+
+cursor:pointer;
+
+}
+
+/* ==========================================
+   SEARCH BUTTON
+========================================== */
+
+.search-btn{
+
+margin-top:25px;
+
+width:100%;
+
+padding:18px;
+
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+#FF7A00,
+#FF9800
+);
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+box-shadow:0 15px 35px rgba(255,122,0,.35);
+
+transition:.35s;
+
+}
+
+.search-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 45px rgba(255,122,0,.45);
+
+}
+
+/* ==========================================
+   DESTINATION SECTION
+========================================== */
+
+.destination-section{
+
+padding:90px 0;
+
+background:linear-gradient(
+180deg,
+#ffffff,
+#f8fbff
+);
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.destination-heading{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.destination-heading span{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:#dbeafe;
+
+color:#2563EB;
+
+border-radius:40px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+}
+
+.destination-heading h2{
+
+font-size:48px;
+
+color:#1E293B;
+
+margin-bottom:20px;
+
+}
+
+.destination-heading p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:18px;
+
+color:#64748B;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.search-card{
+
+animation:fadeSearch .8s ease;
+
+}
+
+@keyframes fadeSearch{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ==========================================
+   HOME PAGE
+========================================== */
+
+.home-page{
+    background:#f8fbff;
+}
+
+/* ==========================================
+   SEARCH SECTION
+========================================== */
+
+.search-section{
+    position:relative;
+    padding:90px 0;
+    margin-top:-60px;
+    z-index:20;
+}
+
+/* ==========================================
+   SEARCH CARD
+========================================== */
+
+.search-card{
+
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #1D4ED8
+    );
+
+    border-radius:30px;
+
+    padding:50px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 55px rgba(37,99,235,.30);
+
+}
+
+/* Decorative Circle */
+
+.search-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+right:-70px;
+top:-70px;
+
+}
+
+.search-card::after{
+
+content:"";
+
+position:absolute;
+
+width:160px;
+height:160px;
+
+background:rgba(255,255,255,.06);
+
+border-radius:50%;
+
+left:-40px;
+bottom:-40px;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.search-title{
+
+position:relative;
+
+z-index:5;
+
+text-align:center;
+
+color:white;
+
+margin-bottom:40px;
+
+}
+
+.search-title span{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:rgba(255,255,255,.15);
+
+border-radius:40px;
+
+margin-bottom:20px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+backdrop-filter:blur(12px);
+
+}
+
+.search-title h2{
+
+font-size:46px;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+.search-title p{
+
+font-size:18px;
+
+color:#dbeafe;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   SEARCH CONTROLS
+========================================== */
+
+.search-controls{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:25px;
+
+position:relative;
+
+z-index:5;
+
+}
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.input-group{
+
+display:flex;
+
+align-items:center;
+
+background:white;
+
+height:68px;
+
+padding:0 22px;
+
+border-radius:18px;
+
+transition:.35s;
+
+}
+
+.input-group:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.input-group:focus-within{
+
+box-shadow:
+0 0 0 4px rgba(255,255,255,.25),
+0 12px 35px rgba(37,99,235,.25);
+
+}
+
+.input-icon{
+
+font-size:22px;
+
+color:#2563EB;
+
+margin-right:15px;
+
+}
+
+.input-group input,
+.input-group select{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+font-size:17px;
+
+color:#334155;
+
+}
+
+.input-group input::placeholder{
+
+color:#94A3B8;
+
+}
+
+.input-group select{
+
+cursor:pointer;
+
+}
+
+/* ==========================================
+   SEARCH BUTTON
+========================================== */
+
+.search-btn{
+
+margin-top:25px;
+
+width:100%;
+
+padding:18px;
+
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+#FF7A00,
+#FF9800
+);
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+box-shadow:0 15px 35px rgba(255,122,0,.35);
+
+transition:.35s;
+
+}
+
+.search-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 45px rgba(255,122,0,.45);
+
+}
+
+/* ==========================================
+   DESTINATION SECTION
+========================================== */
+
+.destination-section{
+
+padding:90px 0;
+
+background:linear-gradient(
+180deg,
+#ffffff,
+#f8fbff
+);
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.destination-heading{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.destination-heading span{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:#dbeafe;
+
+color:#2563EB;
+
+border-radius:40px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+}
+
+.destination-heading h2{
+
+font-size:48px;
+
+color:#1E293B;
+
+margin-bottom:20px;
+
+}
+
+.destination-heading p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:18px;
+
+color:#64748B;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.search-card{
+
+animation:fadeSearch .8s ease;
+
+}
+
+@keyframes fadeSearch{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}

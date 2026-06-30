@@ -1,0 +1,292 @@
+/* ==========================================
+   PACKAGES PAGE
+========================================== */
+
+.packages-page{
+    background:#f6f9fc;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.packages-hero{
+    position:relative;
+    height:60vh;
+    background:
+    linear-gradient(rgba(15,23,42,.70),rgba(37,99,235,.45)),
+    url("../assets/images/package-banner.jpg")
+    center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.packages-hero::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-150px;
+    right:-150px;
+}
+
+.packages-hero::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    bottom:-80px;
+    left:-80px;
+}
+
+.packages-content{
+    position:relative;
+    z-index:5;
+    text-align:center;
+    color:#fff;
+    max-width:800px;
+}
+
+.packages-content span{
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:40px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:25px;
+}
+
+.packages-content h1{
+    font-size:60px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.packages-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#E2E8F0;
+}
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.packages-toolbar{
+    position:relative;
+    margin-top:-55px;
+    z-index:100;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:20px;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(20px);
+    padding:28px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.toolbar-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#F8FAFC;
+    border-radius:16px;
+    padding:16px 20px;
+    border:2px solid transparent;
+    transition:.35s;
+}
+
+.toolbar-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(37,99,235,.15);
+}
+
+.toolbar-box:focus-within{
+    border-color:#2563EB;
+    background:#fff;
+}
+
+.toolbar-box svg{
+    color:#2563EB;
+    font-size:20px;
+}
+
+.toolbar-box input,
+.toolbar-box select{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:16px;
+    color:#334155;
+}
+
+.toolbar-box input::placeholder{
+    color:#94A3B8;
+}
+
+.toolbar-box select{
+    cursor:pointer;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.packages-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:35px;
+    margin:80px 0;
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.no-package{
+    grid-column:1/-1;
+    text-align:center;
+    padding:80px 40px;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.no-package h2{
+    font-size:36px;
+    color:#2563EB;
+    margin-bottom:15px;
+}
+
+.no-package p{
+    color:#64748B;
+    font-size:18px;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.packages-toolbar{
+    animation:fadeDown .8s ease;
+}
+
+.packages-grid{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .packages-content h1{
+        font-size:52px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .packages-toolbar{
+        grid-template-columns:1fr;
+    }
+
+    .packages-content h1{
+        font-size:44px;
+    }
+
+    .packages-grid{
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+
+}
+
+@media(max-width:768px){
+
+    .packages-hero{
+        height:50vh;
+    }
+
+    .packages-content h1{
+        font-size:34px;
+    }
+
+    .packages-content p{
+        font-size:16px;
+    }
+
+    .packages-toolbar{
+        margin-top:-35px;
+        padding:22px;
+    }
+
+    .packages-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .packages-content h1{
+        font-size:28px;
+    }
+
+    .packages-content span{
+        font-size:13px;
+    }
+
+    .packages-toolbar{
+        padding:18px;
+    }
+
+    .toolbar-box{
+        padding:14px;
+    }
+
+    .no-package{
+        padding:45px 20px;
+    }
+
+    .no-package h2{
+        font-size:28px;
+    }
+
+}

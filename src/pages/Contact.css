@@ -1,0 +1,451 @@
+/* ==========================================
+   CONTACT PAGE
+========================================== */
+
+.contact-page{
+    background:#f8fbff;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.contact-hero{
+    position:relative;
+    height:55vh;
+    background:
+    linear-gradient(rgba(15,23,42,.70),rgba(37,99,235,.50)),
+    url("../assets/images/contact-banner.jpg")
+    center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.contact-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.30)
+    );
+}
+
+.contact-hero::before{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-150px;
+    right:-150px;
+}
+
+.contact-hero::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    left:-80px;
+    bottom:-80px;
+}
+
+.contact-hero-content{
+    position:relative;
+    z-index:5;
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    color:white;
+}
+
+.contact-hero-content span{
+    display:inline-block;
+    padding:10px 24px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(10px);
+    border-radius:40px;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.contact-hero-content h1{
+    font-size:58px;
+    margin-bottom:20px;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.contact-hero-content p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:#E2E8F0;
+}
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact-section{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:40px;
+    margin-top:-70px;
+    position:relative;
+    z-index:10;
+    padding-bottom:80px;
+}
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.contact-info{
+    background:white;
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+}
+
+.contact-info h2{
+    font-size:34px;
+    color:#0F172A;
+    margin-bottom:15px;
+}
+
+.contact-info>p{
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* ==========================================
+   INFO CARD
+========================================== */
+
+.info-card{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px;
+    margin-bottom:18px;
+    background:#F8FAFC;
+    border-radius:18px;
+    transition:.35s;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+    background:white;
+    box-shadow:0 15px 35px rgba(37,99,235,.15);
+}
+
+.info-card svg{
+    width:55px;
+    height:55px;
+    padding:15px;
+    border-radius:50%;
+    background:#2563EB;
+    color:white;
+    font-size:22px;
+}
+
+.info-card h4{
+    color:#0F172A;
+    margin-bottom:6px;
+}
+
+.info-card span{
+    color:#64748B;
+    font-size:15px;
+}
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact-form-card{
+    background:#ffffff;
+    border-radius:30px;
+    padding:45px;
+    box-shadow:0 20px 50px rgba(15,23,42,.10);
+    transition:.35s;
+}
+
+.contact-form-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 60px rgba(15,23,42,.15);
+}
+
+.contact-form-card h2{
+    font-size:36px;
+    color:#0F172A;
+    margin-bottom:10px;
+}
+
+.contact-form-card p{
+    color:#64748B;
+    margin-bottom:35px;
+    line-height:1.8;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:18px 20px;
+    border:2px solid #E2E8F0;
+    border-radius:16px;
+    background:#F8FAFC;
+    font-size:16px;
+    transition:.35s;
+    resize:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#94A3B8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#2563EB;
+    background:#ffffff;
+    box-shadow:0 0 0 5px rgba(37,99,235,.10);
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.contact-form button{
+    border:none;
+    padding:18px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#2563EB,#1D4ED8);
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 15px 30px rgba(37,99,235,.25);
+}
+
+.contact-form button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(37,99,235,.35);
+}
+
+.contact-form button:active{
+    transform:scale(.98);
+}
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.contact-info,
+.contact-form-card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.contact-section{
+    grid-template-columns:1fr;
+    margin-top:-50px;
+}
+
+.contact-hero-content h1{
+    font-size:46px;
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-hero{
+    height:45vh;
+}
+
+.contact-hero-content h1{
+    font-size:34px;
+}
+
+.contact-hero-content p{
+    font-size:16px;
+}
+
+.contact-info,
+.contact-form-card{
+    padding:30px;
+}
+
+}
+
+@media(max-width:480px){
+
+.contact-hero-content h1{
+    font-size:28px;
+}
+
+.contact-hero-content span{
+    font-size:13px;
+}
+
+.contact-info h2,
+.contact-form-card h2{
+    font-size:28px;
+}
+
+.contact-info,
+.contact-form-card{
+    padding:22px;
+}
+
+.info-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+/*==========================================
+SUCCESS MODAL
+==========================================*/
+
+.success-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeIn .35s ease;
+    backdrop-filter:blur(8px);
+}
+
+.success-card{
+    width:460px;
+    max-width:90%;
+    background:#fff;
+    border-radius:28px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+    animation:popup .45s ease;
+}
+
+.success-circle{
+    width:110px;
+    height:110px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 15px 35px rgba(34,197,94,.35);
+}
+
+.checkmark{
+    font-size:54px;
+    color:white;
+    font-weight:bold;
+}
+
+.success-card h2{
+    color:#0F172A;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.success-card p{
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.success-details{
+    background:#F8FAFC;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:30px;
+}
+
+.success-details div{
+    margin:12px 0;
+    color:#334155;
+    font-weight:500;
+}
+
+.success-btn{
+    width:100%;
+    border:none;
+    padding:16px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#2563EB,#1D4ED8);
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.success-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+/* Light Theme */
+
+body.light{
+    background:#e6e1e1;
+    color:#111827;
+    transition:.3s;
+}
+
+/* Dark Theme */
+
+body.dark{
+    background:#000000;
+    color:#ffffff;
+    transition:.3s;
+}
