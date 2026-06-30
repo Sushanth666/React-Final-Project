@@ -15,7 +15,7 @@ import shimla from "../assets/images/shimla.jpg";
 import andaman from "../assets/images/andaman.jpg";
 import jaipur from "../assets/images/jaipur.jpg";
 import udaipur from "../assets/images/udaipur.jpg";
-import dubai from "../assets/images/Dubai.jpg";
+import dubai from "../assets/images/dubai.jpg";
 import maldives from "../assets/images/Maldives.jpg";
 import bali from "../assets/images/Bali.jpg";
 
